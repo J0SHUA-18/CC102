@@ -1,10 +1,10 @@
 #include <iostream>
 using name space std;
 int main(){
-cout << "OUR LADY OF LOURDES COLLEGE FOUNDATION";
-cout << "COLLEGE OF COMPUTER STUDIES;
-cout << "BSIT 1 B";
-cout << "JOSHUA M. DE GUZMAN;
-cout << :P-3 SAN ISIDRO TALISAY CAMRINES NORTE;
+cout << "OUR LADY OF LOURDES COLLEGE FOUNDATION" << endl;
+cout << "COLLEGE OF COMPUTER STUDIES" << endl;
+cout << "BSIT 1 B" << endl;
+cout << "JOSHUA M. DE GUZMAN" << endl;
+cout << "P-3 SAN ISIDRO TALISAY CAMRINES NORTE" << endl;
 return 0;
 }
