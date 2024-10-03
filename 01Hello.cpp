@@ -1,5 +1,5 @@
 #include <iostream>
 int main(){
-	std :: cout << "HELLO WORLD!!";
+	std :: cout << "HOWDY LOURDENIAN PROGTAMMERS!";
 	return 0;
 }
