@@ -1,5 +1,5 @@
 #include <iostream>
-using name space std;
+using namespace std;
 int main(){
 cout << "OUR LADY OF LOURDES COLLEGE FOUNDATION" << endl;
 cout << "COLLEGE OF COMPUTER STUDIES" << endl;
