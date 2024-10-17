@@ -3,54 +3,65 @@
 using namespace std;
 
 int main(){
-	
-	int sugarpriceUSD,ricepricePound,sardinespricePound,coffeepriceUSD,milkpriceUSD;
-	int sugarCostUSD , riceCostPound , sardinesCostPound, coffeeCostUSD , milkCostUSD;
-	int sugarCostPHP , riceCostPHP , sardinesCostPHP, coffeeCostPHP , milkCostPHP;
+	//declarations
+	int sugarOp,riceOp,sardinesOp,coffeeOp,milkOp;
 	int sugarQty,riceQty,sardinesQty,coffeeQty,milkQty;
-	double usdtophp,poundtophp,pPHP;
+	float dollarE,pesoE,PoundE;
+	float sugarCiD,RiceCiP,sardinesCiP,coffeCiD,milkCiD;
+	float totalDs,totalPr,totalsar,totalDc,totalDm,total;
 	
-	cout << "Please put the exchange rate for USDDOLLAR:";
-	cin >> usdtophp;
-	
-	cout << "Enter thr Price of the Sugar in USD\n";
-	cin  >> sugarpriceUSD;
-	sugarCostUSD = sugarQty * sugarpriceUSD;
-	sugarCostUSD = sugarpriceUSD * sugarCostPHP;
-	cout << "Sugar Cost in PHP:" << sugarCostPHP << endl;
-	
-	
-	cout << "Enter thr Price of the rice in Pound\n";
-	cin >> ricepricePound;
-	cout << "Enter thr Price of the sardines in Pound\n";
-	cin >> sardinespricePound;
-	cout << "Enter thr Price of the Coffee in USD\n";
-	cin >> coffeepriceUSD;
-	cout << "Enter thr Price of the Sugar in USD\n";
-	cin >> milkpriceUSD;
-	
-
-	cout << "*********************************************************\n";
-	cout << "Please Enter the Quantity of the Sugar\n";
+	cout << "*****************************************************\n";
+	cout << "Please Enter the Price of Sugar: ";
+	cin >> sugarOp;
+	cout << "Please Enter the Amount of Sugar: ";
 	cin >> sugarQty;
-	cout << "Please Enter the Quantity of the Rice\n"; 
+	cout << "*****************************************************\n";
+	cout << "Please Enter the Price of Rice: ";
+	cin >> riceOp;
+	cout << "Please Enter the Amount of Rice: ";
 	cin >> riceQty;
-	cout << "Please Enter the Quantity of the Sardines\n";
+	cout << "*****************************************************\n";
+	cout << "Please Enter the Price of Sardines: ";
+	cin >> sardinesOp;
+	cout << "Please Enter the Amount of Sardines: ";
 	cin >> sardinesQty;
-	cout << "Please Enter the Quantity of the Coffee\n";
+	cout << "*****************************************************\n";
+	cout << "Please Enter the Price of Coffee: ";
+	cin >> coffeeOp;
+	cout << "Please Enter the Amount of Coffee: ";
 	cin >> coffeeQty;
-	cout << "Please Enter the Quantity of the Milk\n";
+	cout << "*****************************************************\n";
+	cout << "Please Enter the Price of Milk: ";
+	cin >> milkOp;
+	cout << "Please Enter the Amount of Milk: ";
 	cin >> milkQty;
-	cout << "*********************************************************/n";
-	cout << "Enter the Conversion USD";
-	cin >> usdtophp;
-	cout << "Enter the Conversion POUND";
-	cin >> poundtophp;
-	cout << "Enter the Conversion PHP";
-	cin >> pPHP;
+	cout << "*****************************************************\n";
+	cout << "Please put the DOLLAR TO PESOS Conversion rate: ";
+	cin >> dollarE;
+	cout << "Please put the POUND TO PESOS Conversion rate: ";
+	cin >> PoundE;
+	cout << "*****************************************************\n"; 
+	//Formula
+	sugarCiD = sugarOp * sugarQty;
+	RiceCiP = riceOp * riceQty;
+	sardinesCiP = sardinesOp * sardinesQty;
+	coffeCiD = coffeeOp * coffeeQty;
+	milkCiD = milkOp * milkQty;
+	//Part2
+	totalDs = dollarE * sugarCiD;
+	totalPr = PoundE * RiceCiP;
+	totalsar = PoundE * sardinesCiP;
+	totalDc = dollarE * coffeCiD;
+	totalDm = dollarE * milkCiD;
+	//part3
+	total = totalDc + totalPr + totalsar + totalDc + totalDm;
+	cout << "The Original Total of Sugar in DOLLAR is " <<  sugarCiD << " DOLLAR" << endl; 
+	cout << "The Original Total of Rice in POUND is " << RiceCiP << " POUND" << endl; 
+	cout << "The Original Total of Sardines in POUND is " << sardinesCiP << " POUND"<< endl;
+	cout << "The Original Total of Coffee in DOLLAR is " << coffeCiD << " DOLLAR"<< endl;
+	cout << "The Original Total of Milk in DOLLAR is " <<milkCiD << " DOLLAR" << endl;
 	
-	
-	
+	cout << "Thank You need to pay of " << total << " PESOS. Please come again";
 	
 	return 0;
 }
