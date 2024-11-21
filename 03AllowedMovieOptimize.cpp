@@ -7,31 +7,26 @@ int main() {
     double money;
     bool parent;
     string PrintShow, PrintMoney;
-
-    cout << "Enter your Age: ";
+    cout << "Enter age: ";
     cin >> age;
     if (age < 13) {
-        PrintShow = "G Show";
-    } else if (age >= 13 && age < 16) {
-        cout << "With Parent? (1 for yes, 0 for no): ";
+        cout << "With parents? ";
         cin >> parent;
-        if (parent) {
-            PrintShow = "G, PG, & R Show";
-        } else {
-            PrintShow = "G & PG Show";
-        }
-    } else {
-        PrintShow = "G, PG, & R Show";
+        PrintShow = parent ? "PG, G show." : "G show.";
+    } 
+	else if (age < 16) {
+        cout << "With parent? ";
+        cin >> parent;
+        PrintShow = parent ? "G, PG, R show." : "G, PG show.";
+    } 
+	else {
+        PrintShow = "R, PG, G show.";
     }
-    cout << "Enter Money: ";
+    cout << "Enter money: ";
     cin >> money;
-    if (money < 7.5) {
-        PrintMoney = "Not Enough Money";
-    } else if (money < 10.5) {
-        PrintMoney = "Can go to matinee show";
-    } else {
-        PrintMoney = "Can go to evening & matinee show";
-    }
+    PrintMoney = money < 7.5 ? "Not enough money." :
+                    money < 10.5 ? "Can go to matinee show." :
+                    "Can go evening & matinee show.";
     cout << PrintShow << endl;
     cout << PrintMoney << endl;
     return 0;
